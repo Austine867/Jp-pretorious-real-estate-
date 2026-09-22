@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jp Pretorius | Real Estate — Premium Homes in Midstream Estate</title>
+<meta name="description" content="Jp Pretorius | Real Estate — specialist agent for premium homes in Midstream Estate, Centurion. Buy, sell and view quality properties with local, personal expertise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#191815;
+    --charcoal-soft:#242220;
+    --navy:#141d27;
+    --soft-white:#faf8f4;
+    --bone:#efe8db;
+    --bronze:#a9803f;
+    --bronze-light:#c8a06a;
+    --bronze-dim:#8a6a37;
+    --ink:#2a2824;
+    --line:rgba(169,128,63,0.28);
+    --line-soft:rgba(255,255,255,0.12);
+    --max:1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background:var(--soft-white);
+    color:var(--ink);
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    margin:0;
+    color:var(--charcoal);
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;line-height:1.7;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  button{font-family:inherit;cursor:pointer;}
+  :focus-visible{outline:2px solid var(--bronze);outline-offset:3px;}
+
+  .kicker{
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    color:var(--bronze-dim);
+    font-weight:500;
+    margin-bottom:10px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(25,24,21,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .header-inner{
+    max-width:var(--max);margin:0 auto;padding:16px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand svg{width:34px;height:34px;flex-shrink:0;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-text .name{
+    font-family:'Fraunces', serif;
+    font-size:1.18rem;
+    color:var(--soft-white);
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+  .brand-text .tag{
+    font-size:0.62rem;
+    letter-spacing:0.16em;
+    color:var(--bronze-light);
+    margin-top:2px;
+  }
+  nav.primary-nav{display:flex;align-items:center;gap:38px;}
+  nav.primary-nav a{
+    font-size:0.92rem;color:rgba(250,248,244,0.82);
+    position:relative;padding:4px 0;transition:color .25s ease;
+  }
+  nav.primary-nav a::after{
+    content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;
+    background:var(--bronze-light);transition:width .3s ease;
+  }
+  nav.primary-nav a:hover{color:var(--soft-white);}
+  nav.primary-nav a:hover::after{width:100%;}
+  .header-right{display:flex;align-items:center;gap:26px;}
+  .header-phone{
+    display:flex;align-items:center;gap:9px;
+    color:var(--soft-white);font-size:0.92rem;font-weight:500;
+    white-space:nowrap;
+  }
+  .header-phone svg{width:16px;height:16px;stroke:var(--bronze-light);flex-shrink:0;}
+  .menu-toggle{
+    display:none;background:none;border:none;padding:6px;
+  }
+  .menu-toggle svg{width:24px;height:24px;stroke:var(--soft-white);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;align-items:flex-end;
+    background:linear-gradient(180deg, rgba(20,19,17,0.35) 0%, rgba(18,17,15,0.55) 55%, rgba(15,14,12,0.94) 100%),
+      url('https://images.unsplash.com/photo-1757362141189-8d2f7af341b0?q=80&w=2400&auto=format&fit=crop') center 62%/cover no-repeat;
+    background-attachment:fixed;
+  }
+  @media (max-width:820px){ .hero{background-attachment:scroll;} }
+  .hero-inner{
+    max-width:var(--max);margin:0 auto;padding:0 28px 84px;
+    width:100%;
+  }
+  .hero-content{max-width:640px;}
+  .hero .kicker{color:var(--bronze-light);opacity:0;animation:riseIn .9s ease 0.15s forwards;}
+  .hero h1{
+    font-size:clamp(2.5rem, 5.4vw, 4.1rem);
+    color:var(--soft-white);
+    line-height:1.06;
+    font-weight:500;
+    opacity:0;animation:riseIn .9s ease 0.32s forwards;
+  }
+  .hero p.lead{
+    margin-top:22px;
+    font-size:1.08rem;
+    color:rgba(250,248,244,0.82);
+    max-width:520px;
+    line-height:1.75;
+    opacity:0;animation:riseIn .9s ease 0.5s forwards;
+  }
+  @keyframes riseIn{
+    from{opacity:0;transform:translateY(16px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  .hero-actions{
+    display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;
+    opacity:0;animation:riseIn .9s ease 0.68s forwards;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 30px;font-size:0.9rem;font-weight:500;
+    letter-spacing:0.02em;
+    border-radius:2px;
+    transition:all .3s ease;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--bronze);color:var(--charcoal);
+  }
+  .btn-primary:hover{background:var(--bronze-light);}
+  .btn-ghost-dark{
+    border-color:rgba(250,248,244,0.45);color:var(--soft-white);
+    background:transparent;
+  }
+  .btn-ghost-dark:hover{border-color:var(--soft-white);background:rgba(250,248,244,0.06);}
+  .btn-ghost-light{
+    border-color:rgba(25,24,21,0.3);color:var(--charcoal);
+    background:transparent;
+  }
+  .btn-ghost-light:hover{border-color:var(--charcoal);background:rgba(25,24,21,0.04);}
+  .btn-block{width:100%;}
+
+  /* ---------- Section shells ---------- */
+  section{padding:108px 0;}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:40px;margin-bottom:56px;flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(1.9rem, 3vw, 2.5rem);}
+  .section-head .desc{max-width:400px;color:#54504a;font-size:0.98rem;line-height:1.75;}
+  .rule{
+    width:64px;height:1px;background:var(--bronze);margin:0 0 20px;
+  }
+
+  /* ---------- Featured Homes ---------- */
+  .homes-grid{
+    display:grid;grid-template-columns:repeat(3, 1fr);gap:28px;
+  }
+  .home-card{
+    background:#fff;border:1px solid rgba(25,24,21,0.08);
+    display:flex;flex-direction:column;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .home-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -20px rgba(25,24,21,0.28);}
+  .home-card.feature{grid-column:span 2;flex-direction:row;}
+  .home-card .img-wrap{
+    position:relative;overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .home-card.feature .img-wrap{aspect-ratio:auto;flex:1 1 56%;}
+  .home-card .img-wrap img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .6s ease;
+  }
+  .home-card:hover .img-wrap img{transform:scale(1.05);}
+  .home-tag{
+    position:absolute;top:16px;left:16px;
+    background:rgba(20,19,17,0.82);color:var(--bronze-light);
+    font-size:0.68rem;letter-spacing:0.08em;padding:6px 12px;
+  }
+  .home-body{padding:24px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .home-card.feature .home-body{flex:1 1 44%;justify-content:center;padding:34px;}
+  .home-price{
+    font-family:'Fraunces', serif;font-size:1.5rem;color:var(--charcoal);font-weight:500;
+  }
+  .home-card.feature .home-price{font-size:2rem;}
+  .home-desc{color:#5a564f;font-size:0.94rem;}
+  .home-meta{
+    display:flex;gap:16px;color:#78736a;font-size:0.82rem;margin-top:2px;
+  }
+  .home-meta span{display:flex;align-items:center;gap:6px;}
+  .home-meta svg{width:14px;height:14px;stroke:var(--bronze);}
+  .home-cta{
+    margin-top:14px;font-size:0.86rem;font-weight:500;color:var(--bronze-dim);
+    display:inline-flex;align-items:center;gap:8px;width:fit-content;
+    border-bottom:1px solid transparent;padding-bottom:2px;
+    transition:border-color .25s ease, color .25s ease;
+  }
+  .home-cta:hover{border-color:var(--bronze-dim);color:var(--charcoal);}
+
+  @media (max-width:940px){
+    .homes-grid{grid-template-columns:repeat(2,1fr);}
+    .home-card.feature{grid-column:span 2;flex-direction:column;}
+  }
+  @media (max-width:640px){
+    .homes-grid{grid-template-columns:1fr;}
+    .home-card.feature{grid-column:span 1;}
+  }
+
+  /* ---------- About ---------- */
+  .about{background:var(--bone);}
+  .about-grid{
+    display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;align-items:center;
+  }
+  .about-portrait{position:relative;}
+  .about-portrait img{
+    width:100%;aspect-ratio:3/4;object-fit:cover;
+    filter:saturate(0.94) contrast(1.02);
+  }
+  .about-portrait::before{
+    content:'';position:absolute;top:-18px;left:-18px;right:18px;bottom:18px;
+    border:1px solid var(--bronze);z-index:-1;
+  }
+  .about-copy p{color:#4c483f;margin-bottom:18px;font-size:1.02rem;}
+  .about-copy p:last-of-type{margin-bottom:0;}
+  .about-stats{
+    display:flex;gap:0;margin-top:38px;border-top:1px solid rgba(25,24,21,0.14);padding-top:28px;
+  }
+  .stat{flex:1;padding-right:24px;}
+  .stat .num{font-family:'Fraunces', serif;font-size:1.9rem;color:var(--bronze-dim);font-weight:500;}
+  .stat .label{font-size:0.82rem;color:#6b665c;margin-top:4px;}
+
+  @media (max-width:880px){
+    .about-grid{grid-template-columns:1fr;gap:44px;}
+    .about-portrait{max-width:340px;}
+    .about-stats{flex-wrap:wrap;row-gap:20px;}
+    .stat{flex:1 1 45%;}
+  }
+
+  /* ---------- Why work with Jp ---------- */
+  .why{background:var(--soft-white);}
+  .why-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:rgba(25,24,21,0.1);
+    border:1px solid rgba(25,24,21,0.1);
+  }
+  .why-item{background:var(--soft-white);padding:38px 30px;}
+  .why-item svg{width:28px;height:28px;stroke:var(--bronze);margin-bottom:20px;}
+  .why-item h3{font-size:1.08rem;margin-bottom:10px;font-weight:500;}
+  .why-item p{font-size:0.9rem;color:#5a564f;}
+  @media (max-width:880px){ .why-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .why-grid{grid-template-columns:1fr;} }
+
+  /* ---------- Booking form ---------- */
+  .booking{
+    background:var(--navy);color:var(--soft-white);
+    position:relative;
+  }
+  .booking-grid{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;
+  }
+  .booking-copy h2{color:var(--soft-white);}
+  .booking-copy p{color:rgba(250,248,244,0.72);margin-top:18px;font-size:1.02rem;max-width:400px;}
+  .booking-points{margin-top:34px;display:flex;flex-direction:column;gap:16px;}
+  .booking-points .point{display:flex;gap:12px;align-items:flex-start;font-size:0.92rem;color:rgba(250,248,244,0.82);}
+  .booking-points svg{width:16px;height:16px;stroke:var(--bronze-light);margin-top:3px;flex-shrink:0;}
+
+  form.viewing-form{
+    display:grid;grid-template-columns:1fr 1fr;gap:20px;
+  }
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field.full{grid-column:1 / -1;}
+  .field label{font-size:0.78rem;letter-spacing:0.04em;color:rgba(250,248,244,0.62);}
+  .field input, .field select, .field textarea{
+    background:rgba(250,248,244,0.06);
+    border:1px solid rgba(250,248,244,0.2);
+    color:var(--soft-white);
+    padding:13px 15px;font-size:0.94rem;font-family:inherit;
+    border-radius:2px;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .field input::placeholder, .field textarea::placeholder{color:rgba(250,248,244,0.36);}
+  .field input:focus, .field select:focus, .field textarea:focus{
+    border-color:var(--bronze-light);background:rgba(250,248,244,0.1);outline:none;
+  }
+  .field select option{color:#111;}
+  .field textarea{resize:vertical;min-height:96px;}
+  .form-note{
+    grid-column:1/-1;font-size:0.8rem;color:rgba(250,248,244,0.5);margin-top:-6px;
+  }
+  .form-success{
+    grid-column:1/-1;display:none;padding:14px 16px;background:rgba(200,160,106,0.14);
+    border:1px solid rgba(200,160,106,0.4);color:var(--bronze-light);font-size:0.88rem;
+  }
+  .form-success.show{display:block;}
+
+  @media (max-width:880px){
+    .booking-grid{grid-template-columns:1fr;gap:44px;}
+    form.viewing-form{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Location ---------- */
+  .location{background:var(--bone);}
+  .location-grid{
+    display:grid;grid-template-columns:0.95fr 1.35fr;gap:56px;align-items:start;
+  }
+  .location-copy p{color:#4c483f;margin-top:18px;font-size:1rem;}
+  .contact-block{
+    margin-top:34px;padding-top:28px;border-top:1px solid rgba(25,24,21,0.14);
+  }
+  .contact-number{
+    display:flex;align-items:center;gap:12px;
+    font-family:'Fraunces', serif;font-size:1.6rem;color:var(--charcoal);font-weight:500;
+  }
+  .contact-number svg{width:22px;height:22px;stroke:var(--bronze);}
+  .contact-actions{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap;}
+  .btn-whatsapp{
+    background:#1e2b22;color:#fff;
+  }
+  .btn-whatsapp:hover{background:#28392f;}
+  .btn-whatsapp svg{width:17px;height:17px;stroke:#fff;}
+
+  .map-frame{
+    width:100%;aspect-ratio:4/3.1;border:1px solid rgba(25,24,21,0.14);
+    filter:grayscale(0.15) contrast(1.02);
+  }
+  @media (max-width:880px){
+    .location-grid{grid-template-columns:1fr;gap:38px;}
+  }
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--charcoal);color:rgba(250,248,244,0.7);padding:70px 0 30px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:50px;
+    padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,0.09);
+  }
+  .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .footer-brand svg{width:32px;height:32px;}
+  .footer-brand .name{font-family:'Fraunces', serif;color:var(--soft-white);font-size:1.1rem;}
+  .footer-tag{font-size:0.92rem;line-height:1.7;max-width:280px;color:rgba(250,248,244,0.55);}
+  .footer h4{
+    color:var(--soft-white);font-family:'Work Sans', sans-serif;font-weight:500;
+    font-size:0.82rem;letter-spacing:0.06em;margin-bottom:18px;
+  }
+  .footer-links{display:flex;flex-direction:column;gap:12px;}
+  .footer-links a{font-size:0.92rem;color:rgba(250,248,244,0.62);transition:color .25s ease;}
+  .footer-links a:hover{color:var(--bronze-light);}
+  .footer-contact p{font-size:0.92rem;color:rgba(250,248,244,0.62);margin-bottom:10px;}
+  .footer-contact .fphone{color:var(--soft-white);font-weight:500;}
+  .footer-bottom{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:26px;font-size:0.8rem;color:rgba(250,248,244,0.42);flex-wrap:wrap;gap:10px;
+  }
+  @media (max-width:820px){
+    .footer-grid{grid-template-columns:1fr;gap:34px;}
+  }
+
+  /* ---------- Mobile nav ---------- */
+  @media (max-width:900px){
+    nav.primary-nav{
+      position:fixed;top:69px;left:0;right:0;bottom:0;
+      background:var(--charcoal);
+      flex-direction:column;align-items:flex-start;
+      padding:36px 28px;gap:26px;
+      transform:translateX(100%);
+      transition:transform .35s ease;
+    }
+    nav.primary-nav.open{transform:translateX(0);}
+    nav.primary-nav a{font-size:1.1rem;}
+    .menu-toggle{display:block;}
+    .header-phone span{display:none;}
+  }
+  @media (max-width:600px){
+    section{padding:76px 0;}
+    .section-head{margin-bottom:38px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="22.5" stroke="#c8a06a" stroke-width="1"/>
+        <path d="M11 29L24 15L37 29" stroke="#c8a06a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="24" y1="15" x2="24" y2="10" stroke="#c8a06a" stroke-width="1.4" stroke-linecap="round"/>
+        <line x1="15" y1="29" x2="33" y2="29" stroke="#c8a06a" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="name">Jp Pretorius</span>
+        <span class="tag">REAL ESTATE</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#top">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-right">
+      <a href="tel:+27741586766" class="header-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 1-2Z"/></svg>
+        <span>074 158 6766</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <svg id="menuIcon" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="kicker">MIDSTREAM ESTATE &middot; CENTURION</div>
+      <h1>Premium Homes in Midstream Estate</h1>
+      <p class="lead">I help families buy and sell quality homes in Midstream Estate — from golf-course residences to secure family stands — with the local knowledge and personal attention a decision this size deserves.</p>
+      <div class="hero-actions">
+        <a href="#properties" class="btn btn-primary">View Properties</a>
+        <a href="#contact" class="btn btn-ghost-dark">Book a Viewing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED HOMES ================= -->
+<section id="properties">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="rule"></div>
+        <h2>Featured Homes</h2>
+      </div>
+      <p class="desc">A current selection of homes available in and around Midstream Estate — updated as new listings become available.</p>
+    </div>
+
+    <div class="homes-grid">
+
+      <div class="home-card feature">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1757362141189-8d2f7af341b0?q=80&w=1400&auto=format&fit=crop" alt="Grand modern estate home in Midstream at dusk">
+          <span class="home-tag">New Listing</span>
+        </div>
+        <div class="home-body">
+          <div class="home-price">R13 000 000</div>
+          <div class="home-desc">Grand Estate Home on the Fairway — a statement residence with soaring living spaces, a wraparound stone facade and uninterrupted golf course views.</div>
+          <div class="home-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5"/></svg>5 Bed</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M6 12v6M18 12v6M4 18h16"/></svg>4 Bath</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="7" width="18" height="10" rx="1"/><circle cx="7.5" cy="17" r="1.4"/><circle cx="16.5" cy="17" r="1.4"/></svg>Double Garage</span>
+          </div>
+          <a href="#contact" class="home-cta" onclick="document.getElementById('propertyInterest').value='Grand Estate Home on the Fairway — R13 000 000';">Book Viewing &rarr;</a>
+        </div>
+      </div>
+
+      <div class="home-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1757361653037-dbf0d0a820ae?q=80&w=1000&auto=format&fit=crop" alt="Modern family home with manicured garden and pool deck">
+        </div>
+        <div class="home-body">
+          <div class="home-price">R4 300 000</div>
+          <div class="home-desc">Modern Family Home with Pool</div>
+          <div class="home-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5"/></svg>3 Bed</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M6 12v6M18 12v6M4 18h16"/></svg>2 Bath</span>
+          </div>
+          <a href="#contact" class="home-cta" onclick="document.getElementById('propertyInterest').value='Modern Family Home with Pool — R4 300 000';">Enquire &rarr;</a>
+        </div>
+      </div>
+
+      <div class="home-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" alt="Sleek estate villa exterior with private pool">
+        </div>
+        <div class="home-body">
+          <div class="home-price">R6 650 000</div>
+          <div class="home-desc">Luxury Family Home in Midstream</div>
+          <div class="home-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5"/></svg>4 Bed</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M6 12v6M18 12v6M4 18h16"/></svg>3 Bath</span>
+          </div>
+          <a href="#contact" class="home-cta" onclick="document.getElementById('propertyInterest').value='Luxury Family Home in Midstream — R6 650 000';">Enquire &rarr;</a>
+        </div>
+      </div>
+
+      <div class="home-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1536745511564-a5fa6e596e7b?q=80&w=1000&auto=format&fit=crop" alt="Resort-style pool and loungers in a private backyard">
+        </div>
+        <div class="home-body">
+          <div class="home-price">R3 880 000</div>
+          <div class="home-desc">3 Bedroom Modern Home with Pool</div>
+          <div class="home-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5"/></svg>3 Bed</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M6 12v6M18 12v6M4 18h16"/></svg>2 Bath</span>
+          </div>
+          <a href="#contact" class="home-cta" onclick="document.getElementById('propertyInterest').value='3 Bedroom Modern Home with Pool — R3 880 000';">Book Viewing &rarr;</a>
+        </div>
+      </div>
+
+      <div class="home-card">
+        <div class="img-wrap">
+          <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1000&auto=format&fit=crop" alt="Light-filled contemporary living room interior">
+        </div>
+        <div class="home-body">
+          <div class="home-price">R5 250 000</div>
+          <div class="home-desc">Light-Filled Family Living Home</div>
+          <div class="home-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 10.5 12 4l9 6.5M5 9.5V20h14V9.5"/></svg>4 Bed</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 12h16M4 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M6 12v6M18 12v6M4 18h16"/></svg>3 Bath</span>
+          </div>
+          <a href="#contact" class="home-cta" onclick="document.getElementById('propertyInterest').value='Light-Filled Family Living Home — R5 250 000';">Enquire &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-portrait">
+        <img src="https://images.unsplash.com/photo-1627161684458-a62da52b51c3?q=80&w=900&auto=format&fit=crop" alt="Portrait of Jp Pretorius, real estate agent">
+      </div>
+      <div class="about-copy">
+        <div class="rule"></div>
+        <h2 style="margin-bottom:22px;">A trusted, local voice in Midstream Estate</h2>
+        <p>I focus on one area and know it well. Every listing I take on, every buyer I work with, and every viewing I run happens right here in Midstream — which means I can tell you honestly what a home, a street or a section of the estate is really like to live in.</p>
+        <p>Buying or selling a home in an estate like this comes with its own process — estate approvals, HOA requirements, timing around access and security. I handle that side of things personally, so you're not left chasing paperwork or waiting on answers.</p>
+        <p>My approach is simple: fewer clients, more attention. You'll deal with me directly from the first call through to handover, not a rotating team.</p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <div class="num">Local</div>
+            <div class="label">Midstream Estate specialist</div>
+          </div>
+          <div class="stat">
+            <div class="num">Direct</div>
+            <div class="label">You deal with Jp, personally</div>
+          </div>
+          <div class="stat">
+            <div class="num">Considered</div>
+            <div class="label">Quality homes, carefully matched</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY WORK WITH JP ================= -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="rule"></div>
+        <h2>Why Work With Jp</h2>
+      </div>
+      <p class="desc">What clients can expect, from the first conversation to the day you get the keys.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="why-grid">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="M15.3 8.7 13 13l-4.3 2.3L11 11l4.3-2.3Z"/></svg>
+        <h3>Local Expert</h3>
+        <p>Deep, current knowledge of Midstream Estate — pricing, precincts, schools and what genuinely holds value here.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2.5-4 5-4 7 0M14 12c2.5-4 5-4 7 0"/><path d="M10 12h4"/></svg>
+        <h3>Personal Service</h3>
+        <p>One point of contact throughout — I answer my own calls and attend every viewing I list.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg>
+        <h3>Quality Homes</h3>
+        <p>I'm selective about what I list, so buyers can trust that every home meets a genuine standard.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 4.5 6v6.2c0 4.4 3.1 7.3 7.5 8.3 4.4-1 7.5-3.9 7.5-8.3V6L12 3.5Z"/><path d="M9 12.2l2.1 2.1 4-4.2"/></svg>
+        <h3>Trusted Advice</h3>
+        <p>Straightforward guidance on pricing and offers — advice that puts your outcome ahead of a quick sale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING / ENQUIRY FORM ================= -->
+<section class="booking" id="contact">
+  <div class="wrap">
+    <div class="booking-grid">
+      <div class="booking-copy">
+        <div class="kicker" style="color:var(--bronze-light);">BOOK A VIEWING</div>
+        <h2>Let's find your home in Midstream</h2>
+        <p>Tell me a little about what you're looking for, and I'll come back to you personally — usually within a few hours — to confirm viewing times.</p>
+        <div class="booking-points">
+          <div class="point">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Direct response from Jp — no call centre</span>
+          </div>
+          <div class="point">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Viewings arranged around your schedule</span>
+          </div>
+          <div class="point">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>Estate access and security handled for you</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="viewing-form" id="viewingForm">
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+        </div>
+        <div class="field">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="082 000 0000" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="field">
+          <label for="propertyInterest">Property Interest</label>
+          <select id="propertyInterest" name="propertyInterest">
+            <option>General Enquiry</option>
+            <option>Grand Estate Home on the Fairway — R13 000 000</option>
+            <option>Luxury Family Home in Midstream — R6 650 000</option>
+            <option>Light-Filled Family Living Home — R5 250 000</option>
+            <option>Modern Family Home with Pool — R4 300 000</option>
+            <option>3 Bedroom Modern Home with Pool — R3 880 000</option>
+            <option>Selling my home in Midstream Estate</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="preferredDate">Preferred Date</label>
+          <input type="date" id="preferredDate" name="preferredDate">
+        </div>
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me a little about what you're looking for..."></textarea>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-primary btn-block">Request Viewing</button>
+        </div>
+        <p class="form-note">Submitting opens WhatsApp with your details pre-filled, ready to send directly to Jp.</p>
+        <div class="form-success" id="formSuccess">Thank you — opening WhatsApp so you can send your request directly to Jp.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section class="location">
+  <div class="wrap">
+    <div class="location-grid">
+      <div>
+        <div class="rule"></div>
+        <h2>Midstream Estate, Centurion</h2>
+        <p class="location-copy">Midstream Estate is one of Centurion's most established lifestyle estates — known for its schools, parks, 24-hour security and easy access to the N1. It's a place families move to and stay in, which is exactly why I chose to specialise here.</p>
+
+        <div class="contact-block">
+          <div class="contact-number">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 1-2Z"/></svg>
+            074 158 6766
+          </div>
+          <div class="contact-actions">
+            <a href="https://wa.me/27741586766?text=Hi%20Jp%2C%20I%27d%20like%20to%20find%20out%20more%20about%20homes%20in%20Midstream%20Estate." class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-3.6-6.7"/><path d="M20 4l-6.2 8.4-2.8-2.2"/></svg>
+              WhatsApp Jp
+            </a>
+            <a href="tel:+27741586766" class="btn btn-ghost-light">Call Now</a>
+          </div>
+        </div>
+      </div>
+
+      <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Midstream+Estate,+Centurion,+South+Africa&output=embed"
+        title="Map of Midstream Estate, Centurion"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="22.5" stroke="#c8a06a" stroke-width="1"/>
+            <path d="M11 29L24 15L37 29" stroke="#c8a06a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="24" y1="15" x2="24" y2="10" stroke="#c8a06a" stroke-width="1.4" stroke-linecap="round"/>
+            <line x1="15" y1="29" x2="33" y2="29" stroke="#c8a06a" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <span class="name">Jp Pretorius</span>
+        </div>
+        <p class="footer-tag">Premium homes in Midstream Estate, handled personally from first viewing to handover.</p>
+      </div>
+      <div>
+        <h4>QUICK LINKS</h4>
+        <div class="footer-links">
+          <a href="#top">Home</a>
+          <a href="#properties">Properties</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h4>CONTACT</h4>
+        <p class="fphone">074 158 6766</p>
+        <p>Midstream Estate, Centurion</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Jp Pretorius | Real Estate. All rights reserved.</span>
+      <span>Midstream Estate, Centurion, South Africa</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuToggle = document.getElementById('menuToggle');
+  const primaryNav = document.getElementById('primaryNav');
+  const menuIcon = document.getElementById('menuIcon');
+  menuToggle.addEventListener('click', () => {
+    const open = primaryNav.classList.toggle('open');
+    menuIcon.innerHTML = open
+      ? '<line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/>'
+      : '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  });
+  primaryNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    primaryNav.classList.remove('open');
+    menuIcon.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  }));
+
+  const form = document.getElementById('viewingForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('fullName').value;
+    const phone = document.getElementById('phoneNumber').value;
+    const email = document.getElementById('email').value;
+    const interest = document.getElementById('propertyInterest').value;
+    const date = document.getElementById('preferredDate').value;
+    const message = document.getElementById('message').value;
+
+    let text = `Hi Jp, I'd like to request a viewing.%0A%0A`;
+    text += `Name: ${name}%0A`;
+    text += `Phone: ${phone}%0A`;
+    text += `Email: ${email}%0A`;
+    text += `Property Interest: ${interest}%0A`;
+    if(date){ text += `Preferred Date: ${date}%0A`; }
+    if(message){ text += `Message: ${message}`; }
+
+    success.classList.add('show');
+    window.open(`https://wa.me/27741586766?text=${encodeURIComponent(decodeURIComponent(text.replace(/%0A/g,'\n')))}`, '_blank');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
